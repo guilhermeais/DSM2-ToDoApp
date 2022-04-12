@@ -11,14 +11,16 @@ export default ({list, handleRemove, handleMarkAsDone, handleMarkAsPending}) => 
           {todo.description} 
         </td>
         
-        <td></td>
 
-        <td>
+
+    
+
+        <td className='text-right'>
           <IconButton color="success" icon="check" onClick={() => handleMarkAsDone(todo)} hide={todo.done} ></IconButton>
 
           <IconButton color="warning" icon="undo" onClick={() => handleMarkAsPending(todo)} hide={!todo.done} ></IconButton>
 
-          <IconButton color="danger" icon="trash-o" onClick={() => handleRemove(todo)} hide={!todo.done} ></IconButton>
+          <IconButton color="danger" icon="trash-o" onClick={() => handleRemove(todo)}  ></IconButton>
         </td>
       </tr>
     )
@@ -33,9 +35,8 @@ export default ({list, handleRemove, handleMarkAsDone, handleMarkAsPending}) => 
             Descrição
           </th>
 
-          <th></th>
           
-          <th>
+          <th className='text-right'>
             Ações
           </th>
         </tr>

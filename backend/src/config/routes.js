@@ -1,8 +1,13 @@
 const express = require('express')
 
+
 module.exports = function(server) {
     const router = express.Router()
-    server.use('/api', router)
     const todoService = require('../api/todo/todoService')
-    todoService.register(router, '/todos')  
+    const personService = require('../api/person')
+
+
+    server.use('/api', router)
+    todoService.register(router, '/todos')
+    personService.register(router, '/persons')  
 }

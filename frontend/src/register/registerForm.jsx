@@ -1,16 +1,16 @@
 import React from 'react';
 import IconButton from '../template/iconButton';
 
-export default ({handleAdd, handleChange, description, handleSearch, handleClearSearch}) => (
+export default ({handleAdd, handleChange, name, handleSearch, handleClearSearch}) => (
   <div role="form" className="todoForm">
     <div className="col-xs-12 col-sm-9 col-md-10">
   
       <input 
         type="text"
-        id="description"
+        id="name"
         className="form-control"
-        placeholder='Adicione uma tarefa'
-        value={description} 
+        placeholder='Adicione uma pessoa'
+        value={name} 
         onChange={(e)=> handleChange(e.target.value)}
       />
     </div>
